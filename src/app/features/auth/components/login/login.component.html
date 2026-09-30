@@ -1,0 +1,43 @@
+<main class="login-page">
+  <section class="login-panel" aria-labelledby="login-title">
+    <a class="brand" routerLink="/login" aria-label="Molaris home">
+      <span class="brand-mark" aria-hidden="true">M</span>
+      <span>Molaris<span class="brand-period">.</span></span>
+    </a>
+
+    <div class="login-content">
+      <p class="eyebrow">DENTAL PRACTICE MANAGEMENT</p>
+      <h1 id="login-title">Welcome back</h1>
+      <p class="intro">Sign in to continue to your workspace.</p>
+
+      <form (ngSubmit)="openHome()">
+        <label for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="username" placeholder="you@yourclinic.com" required>
+
+        <div class="password-label">
+          <label for="password">Password</label>
+          <a href="mailto:support@molaris.example?subject=Password%20reset">Forgot password?</a>
+        </div>
+        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+
+        <button type="submit">Sign in <span aria-hidden="true">&#8594;</span></button>
+      </form>
+
+      <p class="secure-note"><span aria-hidden="true">&#9679;</span> Your practice data is securely protected</p>
+    </div>
+
+    <footer>© 2026 Molaris Dental Systems</footer>
+  </section>
+
+  <aside class="welcome-panel" aria-label="Molaris dental workspace">
+    <div class="panel-copy">
+      <p class="panel-kicker">A BETTER DAY AT THE PRACTICE</p>
+      <p class="panel-quote">Good care starts with a practice that runs beautifully.</p>
+      <p class="panel-detail">Your people, patients, and day in one calm place.</p>
+    </div>
+    <div class="panel-orbit orbit-one" aria-hidden="true"></div>
+    <div class="panel-orbit orbit-two" aria-hidden="true"></div>
+    <div class="panel-stamp" aria-hidden="true"><span>CARE</span><span>IN EVERY</span><span>DETAIL</span></div>
+    <p class="panel-index">01 <span>/</span> YOUR WORKSPACE</p>
+  </aside>
+</main>
