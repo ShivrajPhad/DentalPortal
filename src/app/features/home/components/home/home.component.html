@@ -1,1 +1,33 @@
-<main class="home-page" aria-label="Home"></main>
+<main class="home-page" aria-labelledby="page-title">
+	<header class="page-header">
+		<div>
+			<p class="eyebrow">PRACTICE WORKSPACE</p>
+			<h1 id="page-title">Hospital overview</h1>
+		</div>
+	</header>
+
+	<p class="page-state" role="status" *ngIf="isLoading">Loading hospital details...</p>
+
+	<section class="hospital-details" aria-labelledby="hospital-details-title" *ngIf="hospitalDetails as hospital">
+		<h2 id="hospital-details-title">Hospital details</h2>
+		<dl>
+			<div class="detail-row">
+				<dt>Hospital name</dt>
+				<dd>{{ hospital.hospitalName || 'Not provided' }}</dd>
+			</div>
+			<div class="detail-row">
+				<dt>Hospital code</dt>
+				<dd>{{ hospital.hospitalCode || 'Not provided' }}</dd>
+			</div>
+			<div class="detail-row">
+				<dt>Address</dt>
+				<dd>{{ hospital.address || 'Not provided' }}</dd>
+			</div>
+		</dl>
+	</section>
+
+	<div class="error-state" role="alert" *ngIf="errorMessage">
+		<p>{{ errorMessage }}</p>
+		<button type="button" (click)="loadHospitalDetails()" [disabled]="isLoading">Try again</button>
+	</div>
+</main>

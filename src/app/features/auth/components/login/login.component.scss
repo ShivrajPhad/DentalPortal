@@ -145,8 +145,20 @@ button:hover {
   background: #1e5948;
 }
 
+button:disabled {
+  background: #718b82;
+  cursor: wait;
+}
+
 button span {
   font-size: 19px;
+}
+
+.error-message {
+  margin: 0;
+  color: #a33d36;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 .secure-note {
